@@ -90,41 +90,32 @@ sources:
           - name: landmark
             description: Nearby landmark or point of interest
 
-        - name: source_nyc_open_restaurants_apps
+  - name: raw_restaurants
+    description: Raw data loaded from NYC Open Data
+    database: jasminpersaud-cis-4400-d18
+    schema: nyc_311_raw_data 
+    tables:
+      - name: source_nyc_open_restaurant_apps
         description: |
-          NYC open data for restaurant applications.
-          Contains details on seating interest, business names, and dimensions.
+          NYC restaurant application requests.
+          One row per application request.
         columns:
           - name: objectid
-            description: Unique ID for restaurant applications.
+            description: Object ID for the restaurant application
             tests:
               - unique
               - not_null
           - name: globalid
-            description: Global unique identifier.
           - name: seating_interest_sidewalk
-            description: Seating Interest (Sidewalk/Roadway/Both).
           - name: restaurant_name
-            description: Name of the restaurant.
           - name: legal_business_name
-            description: Legal name of the business entity.
           - name: doing_business_as_dba
-            description: Doing Business As (DBA) name.
           - name: bulding_number
-            description: Building number of the establishment.
           - name: street
-            description: Street name of the establishment.
           - name: borough
-            description: NYC borough where the restaurant is located.
           - name: zip
-            description: Postcode/Zip code of the business.
           - name: business_address
-            description: Full business address.
           - name: food_service_establishment
-            description: Food Service Establishment Permit number.
           - name: sidewalk_dimensions_length
-            description: Sidewalk Dimensions (Length).
           - name: sidewalk_dimensions_width
-            description: Sidewalk Dimensions (Width).
           - name: sidewalk_dimensions_area
-            description: Sidewalk Dimensions (Area).
