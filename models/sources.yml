@@ -90,7 +90,7 @@ sources:
           - name: landmark
             description: Nearby landmark or point of interest
 
-- name: source_nyc_open_restaurants_apps
+        - name: source_nyc_open_restaurants_apps
         description: |
           NYC open data for restaurant applications.
           Contains details on seating interest, business names, and dimensions.
