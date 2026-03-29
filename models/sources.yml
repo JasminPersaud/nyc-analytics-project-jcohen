@@ -89,3 +89,42 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+
+- name: source_nyc_open_restaurants_apps
+        description: |
+          NYC open data for restaurant applications.
+          Contains details on seating interest, business names, and dimensions.
+        columns:
+          - name: objectid
+            description: Unique ID for restaurant applications.
+            tests:
+              - unique
+              - not_null
+          - name: globalid
+            description: Global unique identifier.
+          - name: seating_interest_sidewalk
+            description: Seating Interest (Sidewalk/Roadway/Both).
+          - name: restaurant_name
+            description: Name of the restaurant.
+          - name: legal_business_name
+            description: Legal name of the business entity.
+          - name: doing_business_as_dba
+            description: Doing Business As (DBA) name.
+          - name: bulding_number
+            description: Building number of the establishment.
+          - name: street
+            description: Street name of the establishment.
+          - name: borough
+            description: NYC borough where the restaurant is located.
+          - name: zip
+            description: Postcode/Zip code of the business.
+          - name: business_address
+            description: Full business address.
+          - name: food_service_establishment
+            description: Food Service Establishment Permit number.
+          - name: sidewalk_dimensions_length
+            description: Sidewalk Dimensions (Length).
+          - name: sidewalk_dimensions_width
+            description: Sidewalk Dimensions (Width).
+          - name: sidewalk_dimensions_area
+            description: Sidewalk Dimensions (Area).
