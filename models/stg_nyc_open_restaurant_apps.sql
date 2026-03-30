@@ -74,6 +74,8 @@ cleaned AS (
        CAST(roadway_dimensions_width AS FLOAT64) AS roadway_width,
        CAST(roadway_dimensions_area AS FLOAT64) AS roadway_area,
        CAST(seating_interest_sidewalk AS STRING) AS seating_interest_sidewalk,
+       CAST(approved_for_sidewalk_seating AS STRING) AS approved_for_sidewalk_seating,
+       CAST(approved_for_roadway_seating AS STRING) AS approved_for_roadway_seating,
        
 
        -- Metadata
